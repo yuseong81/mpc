@@ -31,25 +31,6 @@ class mpc_config:
     NU: int = 2  # length of input vector: u = [steering speed, acceleration]
     TK: int = 20  # finite time horizon length - kinematic
 
-    # # ---------------------------------------------------
-    # # TODO: you may need to tune the following matrices
-    # Rk: list = field(
-    #     # default_factory=lambda: np.diag([0.01, 100.0])
-    #     default_factory=lambda: np.diag([0.005, 270.0])
-    # )  # input cost matrix, penalty for inputs - [accel, steering_speed]
-    # Rdk: list = field(
-    #     # default_factory=lambda: np.diag([0.01, 100.0])
-    #     default_factory=lambda: np.diag([0.005, 90.0])
-    # )  # input difference cost matrix, penalty for change of inputs - [accel, steering_speed]
-    # Qk: list = field(
-    #     default_factory=lambda: np.diag([13.5, 13.5, 6.0, 13.0])  # levine sim
-    #     # default_factory=lambda: np.diag([50., 50., 5.5, 13.0])
-    # )  # state error cost matrix, for the the next (T) prediction time steps [x, y, delta, v, yaw, yaw-rate, beta]
-    # Qfk: list = field(
-    #     default_factory=lambda: np.diag([13.5, 13.5, 6.0, 13.0])  # levine sim
-    #     # default_factory=lambda: np.diag([50., 50., 5.5, 13.0])
-    # )  # final state error matrix, penalty  for the final state constraints: [x, y, delta, v, yaw, yaw-rate, beta]
-    # # ---------------------------------------------------
 # ---------------------------------------------------
     # TODO: you may need to tune the following matrices
     Rk: list = field(
