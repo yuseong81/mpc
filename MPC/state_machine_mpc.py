@@ -221,7 +221,6 @@ class GetOdometry:
                 msg.pose.pose.orientation.w,
             ]
         )
-        self.v = msg.twist.twist.linear.x
 
     def callback_erp(self, msg):
         self.v = msg.speed
